@@ -11,13 +11,13 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;
+    z-index: -1; /* Ensure the video is behind other content */
 }
 
 #background-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensure the video covers the entire background */
 }
 
 .video-overlay {
@@ -26,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity to make the video dimmer */
 }
 
 .banner {
@@ -40,7 +40,7 @@
 
 .navbar {
     font-size: 1.2em;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9); 
     position: absolute;
     top: 0;
     left: 0;
@@ -48,24 +48,24 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 1em;
-    transition: box-shadow 0.5s;
+    padding: 15px;
+    transition: box-shadow 0.5s; /* Add transition for smooth effect */
 }
 
 .navbar:hover {
-    box-shadow: 0 0 10px 5px #347474;
+    box-shadow: 0 0 10px 5px #347474; /* Add green shadow effect on hover */
 }
 
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; /* puts top item bar in rows */
 }
 
 .navbar ul li {
     display: inline-block;
-    margin: 2em;
+    margin: 40px 40px;
     position: relative;
 }
 
@@ -91,21 +91,23 @@
 }
 
 .content-link {
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from link */
 }
 
 .content {
-    width: 80%;
+    width: 80%; /* ensures that the box size is always good on devices */
     max-width: 600px;
-    padding: 2em;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
     text-align: center;
     color: #fff;
-    transition: background-color 0.5s;
-    font-size: 1.5em;
-    position: relative;
+    transition: background-color 0.5s; /* Add transition for smooth effect */
+    font-size: 1.5em; /* Adjust the font size as needed */
+    position: relative; /* Ensure positioning context for the button */
     transform: scale(1.2);
+
+    /*animation*/
     animation-duration: 2s;
     animation-name: anim;
     animation-timing-function: ease;
@@ -115,11 +117,11 @@
     0% {
         transform: scale(1.4);
         box-shadow: 0 0 10px 5px #9acbd0;
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: #fff, .4);
     }
     50% {
         box-shadow: 0 0 10px 5px #48A6A7;
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: #fff, .4);
     }
     100% {
         transform: scale(1.2);
@@ -127,10 +129,14 @@
 }
 
 .content:hover {
-    background-color: #347474;
+    background-color: #347474; /* Change background color on hover */
 }
 
-.content p, .content h1 {
+.content p {
+    color: #F2EFE7;
+}
+
+.content h1 {
     color: #F2EFE7;
 }
 
@@ -148,24 +154,4 @@
 
 .resume-button:hover {
     background-color: #00796b;
-}
-
-@media (max-width: 768px) {
-    .navbar ul li {
-        margin: 1em;
-    }
-
-    .content {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar ul li {
-        margin: 0.5em;
-    }
-
-    .content {
-        font-size: 0.8em;
-    }
 }
